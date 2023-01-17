@@ -1,13 +1,36 @@
 @import "../../../assets/scss/Mixin";
 @import "../../../assets/scss/Reset";
 @import "../../../assets/scss/_Variable";
-header {
+.Main__Header {
   position: sticky;
-  top: 0;
+  top: -80px;
   width: $full-width;
-  box-shadow: $shadow-basic;
-  background: $bg-color-body;
+  background: $bg-color-light-dark;
   z-index: $z-index-header;
+  transition: 0.5s;
+  &.Sticky {
+    background: $bg-color-body;
+    box-shadow: $shadow-basic;
+    position: sticky;
+    top: 0;
+    .Container {
+      .Logo {
+        img {
+          &.logo-1 {
+            display: block;
+          }
+          &.logo-2 {
+            display: none;
+          }
+        }
+      }
+      nav {
+        a {
+          color: $color-black-default;
+        }
+      }
+    }
+  }
   .Container {
     width: $full-width - 10%;
     @include display-flex(row, space-between, center, $size-1rem);
@@ -18,12 +41,21 @@ header {
       width: 50px;
       height: 50px;
       cursor: pointer;
+      img {
+        &.logo-1 {
+          display: none;
+        }
+        &.logo-2 {
+          display: block;
+        }
+      }
     }
     nav {
       @include display-flex(row, space-between, center, $size-2rem);
+      display: none;
       a {
         position: relative;
-        color: $color-black-default;
+        color: $color-white-default;
         font-size: $fs-medium;
         font-weight: $fw-medium;
         &::before {
@@ -48,6 +80,17 @@ header {
             visibility: visible;
           }
         }
+      }
+    }
+    .Button-Open__Nav {
+      @include primary-button( 40px, 40px, (0, 0), (0, 0), $small-radius, $fs-small-xl, $fw-bold, $color-white-default, $color-primary);
+    }
+    @include breakPoints(550px) {
+      .Button-Open__Nav {
+        display: none;
+      }
+      nav{
+        display: flex;
       }
     }
   }

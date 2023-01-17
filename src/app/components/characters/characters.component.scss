@@ -14,7 +14,7 @@ section {
         width: $full-width;
         @include display-flex(row, space-between, center, $size-1rem);
         h1 {
-          font-size: $fs-large-xl;
+          font-size: $fs-large-xxl;
           font-weight: $fw-bold;
           color: $color-gray-200;
         }

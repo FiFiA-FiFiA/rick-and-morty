@@ -13,13 +13,12 @@
 *::-webkit-scrollbar {
   width: $size-04rem;
   height: $size-04rem;
-  background: $color-gray-100;
+  background: $bg-color-dark;
 }
 
 *::-webkit-scrollbar-thumb {
   border-radius: $small-radius;
   background: $color-primary;
-  border-right: $size-01rem solid $bg-color-body;
 }
 
 html {
@@ -30,6 +29,7 @@ html {
 body {
   height: $full-height;
   min-height: $full-height-vh;
+  background: $bg-color-dark;
 }
 
 :is(input,
@@ -102,4 +102,9 @@ ul) {
 
 [hidden] {
   display: none !important;
+}
+
+[disabled] {
+  pointer-events: none;
+  opacity: $opacity-50;
 }

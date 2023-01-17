@@ -4,11 +4,33 @@
   ],
   "hints": {
     "axe/name-role-value": [
-      "default",
+      "off",
       {
         "button-name": "off"
       }
     ],
-    "button-type": "off"
-  }
+    "button-type": "off",
+    "axe/forms": [
+      "default",
+      {
+        "label": "off",
+        "select-name": "off"
+      }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "width: fit-content",
+          "width: fit-content"
+        ]
+      }
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_ff <= 107",
+    "not firefox <= 107"
+  ]
 }

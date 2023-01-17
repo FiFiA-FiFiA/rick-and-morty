@@ -1,7 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener, ViewEncapsulation } from '@angular/core';
 
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, FreeMode, Autoplay } from 'swiper';
-SwiperCore.use([Navigation, Pagination, Scrollbar, FreeMode, A11y, Autoplay]);
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
